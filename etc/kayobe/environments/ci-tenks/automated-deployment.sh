@@ -53,7 +53,7 @@ if [[ ! -d kayobe-config ]]; then
     git checkout $KAYOBE_CONFIG_REF
     popd
 fi
-[[ -d kayobe ]] || git clone https://github.com/stackhpc/kayobe.git -b $KAYOBE_BRANCH
+[[ -d kayobe ]] || git clone https://github.com/mgrzybek/kayobe.git -b $KAYOBE_BRANCH
 [[ -d kayobe/tenks ]] || (cd kayobe && git clone https://opendev.org/openstack/tenks.git)
 popd
 

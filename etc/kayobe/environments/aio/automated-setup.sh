@@ -1,9 +1,9 @@
 #!/bin/bash
 
 BASE_PATH=~
-OPENSTACK_RELEASE=2026.1
-KAYOBE_BRANCH=stackhpc/$OPENSTACK_RELEASE
-KAYOBE_CONFIG_BRANCH=stackhpc/$OPENSTACK_RELEASE
+OPENSTACK_RELEASE=2026.1-flatcar
+KAYOBE_BRANCH=mgrzybek/$OPENSTACK_RELEASE
+KAYOBE_CONFIG_BRANCH=mgrzybek/$OPENSTACK_RELEASE
 KAYOBE_AIO_LVM=true
 KAYOBE_CONFIG_EDIT_PAUSE=false
 AIO_RUN_TEMPEST=false
@@ -71,7 +71,7 @@ clone_repositories() {
     pushd "$BASE_PATH/src"
     # NOTE: Kayobe isn't used for deploying the AIO, but it is used for
     # running the overcloud test VM script. TODO: run installed version
-    [[ -d kayobe ]] || git clone https://github.com/stackhpc/kayobe.git -b "$KAYOBE_BRANCH"
+    [[ -d kayobe ]] || git clone https://github.com/mgrzybek/kayobe.git -b "$KAYOBE_BRANCH"
     [[ -d kayobe-config ]] || git clone https://github.com/stackhpc/stackhpc-kayobe-config kayobe-config -b "$KAYOBE_CONFIG_BRANCH"
     popd
 }

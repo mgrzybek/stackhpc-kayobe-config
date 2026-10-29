@@ -64,7 +64,7 @@ Clone the Kayobe, Kayobe configuration (this one) and Tenks repositories:
    cd
    mkdir -p src
    pushd src
-   git clone https://github.com/stackhpc/kayobe.git -b |current_release_git_branch_name|
+   git clone https://github.com/mgrzybek/kayobe.git -b |current_release_git_branch_name|
    git clone https://github.com/stackhpc/stackhpc-kayobe-config -b |current_release_git_branch_name| kayobe-config
    pushd kayobe
    git clone https://opendev.org/openstack/tenks.git

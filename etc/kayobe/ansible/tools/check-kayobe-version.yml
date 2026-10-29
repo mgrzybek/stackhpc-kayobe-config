@@ -55,7 +55,7 @@
 
         - name: Clone Kayobe at the expected version
           ansible.builtin.git:
-            repo: https://github.com/stackhpc/kayobe.git
+            repo: https://github.com/mgrzybek/kayobe.git
             dest: "{{ kayobe_temp_dir.path }}/kayobe-git"
             version: "{{ kayobe_expected_version.stdout }}"
 

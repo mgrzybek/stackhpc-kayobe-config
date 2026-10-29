@@ -45,7 +45,7 @@ echo 'Defaults !fqdn' | sudo tee /etc/sudoers.d/no-fqdn
 cd $BASE_PATH
 mkdir -p src
 pushd src
-[[ -d kayobe ]] || git clone https://github.com/stackhpc/kayobe.git -b $KAYOBE_BRANCH
+[[ -d kayobe ]] || git clone https://github.com/mgrzybek/kayobe.git -b $KAYOBE_BRANCH
 [[ -d kayobe-config ]] || git clone https://github.com/stackhpc/stackhpc-kayobe-config kayobe-config -b $KAYOBE_CONFIG_BRANCH
 [[ -d kayobe/tenks ]] || (cd kayobe && git clone https://opendev.org/openstack/tenks.git)
 popd
